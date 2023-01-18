@@ -1,0 +1,21 @@
+
+  <% action_url = users_url %>
+  <% button_text = "Sign up" %>
+
+
+<form action= "<%= action_url %>" method="POST">
+
+  <label>Username:
+    <%# prefill input %>
+    <input type="text" name="user[username]" value="<%= banana.username %>">
+  </label>
+  <br>
+  <% if type == :new %>
+    <label>Password:
+      <input type="password" name="user[password]" value="">
+    </label>
+    <br>
+  <% end %>
+
+  <input type="submit" value="Sign up">
+</form>
